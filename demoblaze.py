@@ -112,7 +112,7 @@ modal_body = wait.until(
     EC.visibility_of_element_located((By.CSS_SELECTOR, "div.sweet-alert.showSweetAlert.visible"))
 )
 
-print("Modal apareceu na tela!")
+print("✅ Modal apareceu na tela!")
 
 
 driver.quit()
