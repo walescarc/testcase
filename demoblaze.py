@@ -10,52 +10,52 @@ driver = webdriver.Chrome()
 # Acessar a página
 driver.get("https://www.demoblaze.com/index.html") 
 
-time.sleep(2)
+time.sleep(1)
 
 # Clicar no link com texto "Sony vaio i7"
 elemento = driver.find_element(By.LINK_TEXT, "Sony vaio i7")
 elemento.click()
 
-time.sleep(2)
+time.sleep(1)
 
 botao = driver.find_element(By.LINK_TEXT, "Add to cart")
 botao.click()
 
-time.sleep(2)
+time.sleep(1)
 
 alerta = driver.switch_to.alert
 print(alerta.text) 
 alerta.accept() 
 
-time.sleep(3)
+time.sleep(2)
 
 # Por seletor CSS, mais confiável:
 home_link = driver.find_element(By.CSS_SELECTOR, 'a.nav-link[href="index.html"]')
 home_link.click()
 
-time.sleep(2)
+time.sleep(1)
 
 elemento = driver.find_element(By.LINK_TEXT, "Iphone 6 32gb")
 elemento.click()
 
-time.sleep(2)
+time.sleep(1)
 
 botao = driver.find_element(By.LINK_TEXT, "Add to cart")
 botao.click()
 
-time.sleep(2)
+time.sleep(1)
 
 alerta = driver.switch_to.alert
 print(alerta.text)  
 alerta.accept()
 
-time.sleep(3)
+time.sleep(2)
 
 # Por seletor CSS, mais confiável:
 cart_link = driver.find_element(By.LINK_TEXT, "Cart")
 cart_link.click()
 
-time.sleep(2)
+time.sleep(1)
 
 # Localiza o elemento pelo ID
 total_element = driver.find_element(By.ID, "totalp")
@@ -67,12 +67,12 @@ total_value = int(total_element.text)
 assert total_value == 1580, f"Valor incorreto: {total_value}"
 print("✅ Valor correto no carrinho:", total_value)
 
-time.sleep(2)
+time.sleep(1)
 
 botao_place_order = driver.find_element(By.CSS_SELECTOR, "button.btn.btn-success")
 botao_place_order.click()
 
-time.sleep(2)
+time.sleep(1)
 
 campo_nome = driver.find_element(By.ID, "name")
 campo_nome.send_keys("Hanzo Hasashi") 
